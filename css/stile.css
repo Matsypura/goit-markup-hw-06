@@ -740,7 +740,7 @@ visibility: hidden;
 .modal{
 
 width:408px;
-height: 576px;
+
 background-color:#FCFCFC;
 position: absolute;
 top:50%;
@@ -748,6 +748,7 @@ left:50%;
 transform: translate(-50%, -50%);
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
 border-radius: 4px;
+padding: 72px 24px 24px 24px;
 
 
 }
@@ -773,6 +774,9 @@ border-radius: 4px;
   background: var(--accent);
 box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 border-radius: 50%;
+border-color: transparent;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
 }
 /* Portfolio galeri  */
 
@@ -885,12 +889,13 @@ opacity: 1;
 .modal-form {
   display: flex;
   flex-direction: column;
-  padding: 0 24px;
 }
 
 .modal-form-fild {
   margin-bottom: 8px;
+  
 }
+
 
 .modal-form-title {
   display: flex;
@@ -943,24 +948,23 @@ opacity: 1;
   font-size: 16px;
   line-height: 1.5;
   color: #2E2F42;
-  padding-top: 72px ;
+  
 }
 
 .modal-form-mesage {
+  display: block;
   width: 100%;
   height: 120px;
   padding: 8px 16px;
   resize: none;
   border-radius: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display:block;
+  margin-bottom: 16px;
+  
 }
 
-.check-icon{
-  outline: 2px solid tomato;
-  fill: red;
 
-
-}
 .modal-form-mesage::placeholder {
   font-weight: 400;
   font-size: 12px;
@@ -984,6 +988,7 @@ opacity: 1;
   letter-spacing: 0.04em;
   color: #757575;
   margin-bottom: 24px;
+  
 }
 
 .modal-form-check-polic::before {
@@ -1008,8 +1013,13 @@ opacity: 1;
 
 }
 
-.modal-form-check{
-  display: none;
+.modal-form-check
+{
+  
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+
 } 
 .modal-form-check:focus+.modal-form-check-polic::before {
   outline: 2px solid rgba(0, 0, 255, 0.5);
@@ -1038,6 +1048,7 @@ opacity: 1;
   border-color: transparent;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .modal-form-submit:hover,
